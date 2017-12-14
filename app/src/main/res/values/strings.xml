@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Game Catch South Park</string>
+    <string name="selecione_o_seu_personagem">Selecione o seu personagem:</string>
+    <string name="jogar">Jogar</string>
+    <string name="pronto_para_jogar">Pronto para jogar?</string>
+    <string name="kenny_mc_cormick">Kenny McCormick</string>
+    <string name="eric_cartman">Eric Cartman</string>
+    <string name="kyle_broflovski">Kyle Broflovsky</string>
+    <string name="stan_marsh">Stan Marsh</string>
 </resources>

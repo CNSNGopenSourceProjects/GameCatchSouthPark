@@ -5,7 +5,10 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import kotlinx.android.synthetic.main.activity_game.*
+import java.util.*
 
 val PLACAR_DO_JOGO: String = "placar_do_jogo"
 
@@ -54,5 +57,18 @@ class GameActivity : AppCompatActivity() {
 
     private fun moveImagem() {
         //TODO: mover a imagem de forma aleatória
+        var personagemAltura = pegaPegaView.height
+        var personagemLargura = pegaPegaView.width
+        var telaAltura = areaDeJogo.height
+        var telaLargura = areaDeJogo.width
+        pegaPegaView.translationX = getRandomOffset(telaLargura, personagemLargura).toFloat()
+        pegaPegaView.translationY = getRandomOffset(telaAltura, personagemAltura).toFloat()
+    }
+
+    val numeroAleatorio = Random()
+
+    private fun getRandomOffset(areaTamanho: Int, figuraTamanho: Int): Int {
+        val valor: Int = numeroAleatorio.nextInt(areaTamanho - figuraTamanho)
+        return valor
     }
 }
